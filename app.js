@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 // Routes
 app.get('/',(req, res)=>{
-  res.render('home', {homePageContent: homeStartingContent})
+  res.render('home', {startingContent: homeStartingContent})
 })
 
 
