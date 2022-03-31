@@ -17,27 +17,27 @@ app.use(express.static("public"));
 // Routes
 // Home Route
 app.get('/',(req, res)=>{
-  res.render('home', {startingContent: homeStartingContent})
+  res.render('home', {startingContent: homeStartingContent});
 })
 // About Route
 app.get('/about',(req, res)=>{
-  res.render('about', {aboutContent: aboutContent})
+  res.render('about', {aboutContent: aboutContent});
 })
 
 // Contact Route
 app.get('/contact',(req, res)=>{
-  res.render('contact', {contactText: contactContent})
+  res.render('contact', {contactText: contactContent});
 })
 
 // Compose Routes
 app.get('/compose',(req, res)=>{
-  res.render('compose')
+  res.render('compose');
 })
 
 app.post('/compose',(req, res)=>{
-   let formData = req.body.info;
-    console.log(formData)
-    res.send('received')
+  let formData = req.body.postTitle;
+  console.log(formData);
+  res.send('received');
 })
 
 
