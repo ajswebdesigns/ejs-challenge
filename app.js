@@ -15,10 +15,21 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 // Routes
+// Home Route
 app.get('/',(req, res)=>{
   res.render('home', {startingContent: homeStartingContent})
 })
+// About Route
+app.get('/about',(req, res)=>{
+  res.render('about', {aboutContent: aboutContent})
+})
 
+// Contact Route
+
+// About Route
+app.get('/contact',(req, res)=>{
+  res.render('contact', {contactText: contactContent})
+})
 
 
 
