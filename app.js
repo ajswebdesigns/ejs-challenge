@@ -25,11 +25,15 @@ app.get('/about',(req, res)=>{
 })
 
 // Contact Route
-
-// About Route
 app.get('/contact',(req, res)=>{
   res.render('contact', {contactText: contactContent})
 })
+
+// Compose Route
+app.get('/compose',(req, res)=>{
+  res.render('compose')
+})
+
 
 
 
