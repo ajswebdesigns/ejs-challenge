@@ -29,10 +29,18 @@ app.get('/contact',(req, res)=>{
   res.render('contact', {contactText: contactContent})
 })
 
-// Compose Route
+// Compose Routes
 app.get('/compose',(req, res)=>{
   res.render('compose')
 })
+
+app.post('/compose',(req, res)=>{
+   let formData = req.body.info;
+    console.log(formData)
+    res.send('received')
+})
+
+
 
 
 

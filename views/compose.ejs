@@ -1,9 +1,9 @@
 <%- include('partials/header'); -%>
 <section>
   <h1>Compose </h1>
-  <form action="">
-    <input type="text" placeholder="publish">
-    <button type="submit">Publish</button>
+  <form action="/compose" method="post">
+    <input type="text" placeholder="publish" name="info">
+    <button type="submit" name="button">Publish</button>
   </form>
 </section>
 <%- include('partials/footer'); -%>
