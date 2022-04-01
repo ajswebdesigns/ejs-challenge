@@ -35,8 +35,10 @@ app.get('/compose',(req, res)=>{
 })
 
 app.post('/compose',(req, res)=>{
-  let formData = req.body.postTitle;
-  console.log(formData);
+  let post = {
+    title: req.body.postTitle,
+    content: req.body.postBody
+  };
   res.send('received');
 })
 
