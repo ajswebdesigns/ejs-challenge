@@ -14,10 +14,13 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+let posts = [];
+
 // Routes
 // Home Route
 app.get('/',(req, res)=>{
-  res.render('home', {startingContent: homeStartingContent});
+  res.render('home', {startingContent: homeStartingContent, posts: posts});
+  
 })
 // About Route
 app.get('/about',(req, res)=>{
@@ -39,13 +42,15 @@ app.post('/compose',(req, res)=>{
     title: req.body.postTitle,
     content: req.body.postBody
   };
-  res.send('received');
+  posts.push(post);
+  res.redirect('/');
+  
 })
 
 
 
 
-
+app
 
 
 
