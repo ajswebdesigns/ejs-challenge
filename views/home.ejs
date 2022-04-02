@@ -3,4 +3,8 @@
 
 <p><%= startingContent %></p>
 <%console.log(posts)  %> 
+<%for(let i = 0; i < posts.length; i++){%>
+  <p><%= posts[i].title %></p>
+  <!-- <p><%= posts[i].body %></p> -->
+<%}%>
 <%- include('partials/footer'); -%>
